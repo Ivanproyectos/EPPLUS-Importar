@@ -7,9 +7,9 @@ importar y exportar desde una clase generica(DTO) con epplus
 ## Importar datos desde un archivo excel a una clase 
 ```c#
 List<Formato> datos = new EPPlusExcel<Formato>("file", 2)
-.MapearColumna(x => x.Id, "A", 1)
-.MapearColumna(x => x.Nombre, "B", 1)
-.MapearColumna(x => x.Edad, "C", 1)
+.MapearColumna(x => x.Id, "A")
+.MapearColumna(x => x.Nombre, "B")
+.MapearColumna(x => x.Edad, "C")
 .ExtraerDatos();
 Console.WriteLine("Hello, World!"); 
 ```
@@ -25,3 +25,4 @@ var exportar =await new EPPlusExcel<Formato>(lista,"file",2)
 .MapearColumna(x => x.Edad, "C")
 .ExportarDatos();
 ```
+### pronto nuevas mejoras ❤️
